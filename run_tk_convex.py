@@ -42,17 +42,23 @@ print("\nТочки плоскости")
 # # для удобства, рисуем прямую на основе заданных точек
 # # (tkinter как я понял не поддерживает прямые, а только отрезки,
 # # поэтому просто будем рисовать длинный отрезок)
-# x1, y1, x2, y2 = Figure.fp1.x, Figure.fp1.y, Figure.fp2.x, Figure.fp2.y
-# x3 = 10
-# x4 = -10
-# try:
-#     y3 = (x3 - x1) * (y2 - y1) / (x2 - x1) + y1
-#     y4 = (x4 - x1) * (y2 - y1) / (x2 - x1) + y1
-# except (ZeroDivisionError):
-#     x3 = Figure.fp1.x
-#     x4 = Figure.fp1.x
-#     y3 = Figure.fp1.y + 1000
-#     y4 = Figure.fp1.y - 1000
+x1, y1, x2, y2 = Figure.fp1.x, Figure.fp1.y, Figure.fp2.x, Figure.fp2.y
+x3 = 10
+x4 = -10
+try:# 
+    y3 = (x3 - x1) * (y2 - y1) / (x2 - x1) + y1
+    y4 = (x4 - x1) * (y2 - y1) / (x2 - x1) + y1
+except (ZeroDivisionError):
+    x3 = Figure.fp1.x
+    x4 = Figure.fp1.x
+    y3 = Figure.fp1.y + 1000
+    y4 = Figure.fp1.y - 1000
+
+Figure.fp1.x = x3
+Figure.fp1.y = y3
+Figure.fp2.x = x4
+Figure.fp2.y = y4
+
 
 try:
     # рисуем заданную "прямую"
