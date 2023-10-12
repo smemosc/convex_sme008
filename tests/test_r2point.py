@@ -121,7 +121,7 @@ class TestR2Point:
         d = R2Point(1, -1)
         assert R2Point.angle_deg(a, b, c, d) == 90
 
-    def test_is_cross_8(self):
+    def test_angle_deg_8(self):
         a = R2Point(0, 0)
         b = R2Point(1, 0)
         c = R2Point(1, 0)
