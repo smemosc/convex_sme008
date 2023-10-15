@@ -126,7 +126,7 @@ class TestR2Point:
         b = R2Point(1, 0)
         c = R2Point(1, 0)
         d = R2Point(2, 2)
-        assert R2Point.angle_deg(a, b, c, d) == approx(45)
+        assert R2Point.angle_deg(a, b, c, d) == approx(63.43494882292201)
 
     def test_angle_deg_9(self):
         a = R2Point(0, 0)
